@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+
+    display: grid;
+    grid-template:
+            "header header  header   " auto
+            "nav    article aside   " 1fr
+            "nav    footer  footer  " auto    /
+            auto    1fr auto;
+}
+header{
+    grid-area: header;
+    background-color: palevioletred;
+}
+article{
+    grid-area: article;
+    background-color: red;
+}
+aside{
+    grid-area: aside;
+    background-color: yellowgreen;
+}
+nav{
+    grid-area: nav;
+    background-color: royalblue;
+}
+footer{
+    grid-area: footer;
+    background-color: green;
+}
