@@ -18,12 +18,14 @@
                 <span class="material-icons-outlined">menu</span>
             </div>
             <div class="header-left">
-                <span class="material-icons-outlined">search</span>
+                <img src="media/Logo/abc_company.png" alt="caesersoft">
+                <!--span class="material-icons-outlined">search</span-->
             </div>
             <div class="header-right">
+                
                 <span class="material-icons-outlined">notifications</span>
-                <span class="material-icons-outlined">email</span>
-                <span class="material-icons-outlined">account_circle</span>
+                <span class="material-icons-outlined">manage_accounts</span>
+                <span class="material-icons-outlined">logout</span>
 
             </div>
         </header>
@@ -32,35 +34,41 @@
         <aside id="sidebar">
             <div class="sidebar-title">
                 <div class="sidebar-brand">
-                    <span class="material-icons-outlined">mood</span>User
+                    <figure class="sidebar-avatar">                        
+                        <img src="media/Default/default-user.png" class="img-fluid" alt="Avatar">
+                        <figcaption class="roboto-medium text-center">
+                            Full Name User <br><small class="roboto-condensed-light">Cargo</small>
+                        </figcaption>
+                    </figure>
+                    <div class="sidebar-bar"></div>
                 </div>
                 <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
             </div>
             <ul class="sidebar-list">
                 <li class="sidebar-list-item">
                     <a href="#">
-                        <span class="material-icons-outlined">dashboard</span>Dashboard
+                        <span class="material-icons-outlined">dashboard</span>&nbsp;&nbsp;Escritorio
                     </a>
                 </li>
                 <li class="sidebar-list-item">
                     <a href="#">
-                        <span class="material-icons-outlined">checklist_rtl</span>Ordenes
+                        <span class="material-icons-outlined">checklist_rtl</span>&nbsp;&nbsp;Ordenes
                     </a>
                     </li>
                 <li class="sidebar-list-item">
                     <a href="#">
-                        <span class="material-icons-outlined">troubleshoot</span>Buscador
+                        <span class="material-icons-outlined">troubleshoot</span>&nbsp;&nbsp;Clientes
                     </a>
                 </li>
                 <li class="sidebar-list-item">
                     <a href="#">
-                        <span class="material-icons-outlined">whatshot</span>Taller
+                        <span class="material-icons-outlined">whatshot</span>&nbsp;&nbsp;Taller
                     </a>
                 </li>
                 
                 <li class="sidebar-list-item">
                     <a href="#">
-                        <span class="material-icons-outlined">manage_accounts</span>Perfil
+                        <span class="material-icons-outlined">manage_accounts</span>
                     </a>
                 </li>
             </ul>
@@ -155,11 +163,11 @@
         </main>
         <!--End Main-->
     </div>
-    <!--footer>
+    <footer>
         <nav class="pie">
             <a href="https://www.caesersoft.com/inicio" target="_blank">Desarrollado por &copy; CaeserSoft E.I.R.L 2024</a>
         </nav>
-    </footer-->
+    </footer>
     <!--Custon JS-->
     <script src="js/scripts.js"></script>
 </body>
