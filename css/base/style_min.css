@@ -3,12 +3,12 @@
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 3fr 0.1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-        "header header header"
-        "main main main"
-        "footer footer footer";
+        "header "
+        "main "
+        "footer";
     height: 100vh;           
 }
 
@@ -16,34 +16,38 @@
 a.header-button {
     text-decoration: none;
     color: #f8f9fa;
-    /*background-color:  #0a58ca;*/
     
 }
 .header-button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
     border-radius: 7px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    font-size: 18px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    left: 0;
     font-family: "Open Sands",serif;    
-    padding: 0.25rem 0.5rem ;
-    font-size: 0.875rem;
-    align-items: center;
-    justify-content: center;
-    margin-left: .5rem ;
-    margin-right: .5rem;
-    border: 3px solid #f8f9fa;
+    letter-spacing: 1.5px;
+    border: 2px solid #f8f9fa;
 }
 
 .header-button:hover{
-    background-color: -moz-linear-gradient(left,#0d6efd,#004c9a);
+    background: var(--background-blue-caesersoft);
+    box-shadow: 0 0 10px var(--background-blue-caesersoft),
+        0 0 40px var(--background-blue-caesersoft);
+        transition-delay: 1s;
 }
 a.header-button > .material-icons-outlined{
-    font-size: 0.865rem;
+    font-size: 20px;
 }
 /*----------search box----------*/
 .search_box{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 600px;
     padding: 40px;
     overflow: hidden;
     transform: translate(-50%,-50%);
@@ -75,7 +79,7 @@ a.header-button > .material-icons-outlined{
     left: 0;
     top: -60px;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
     pointer-events: none;
     transition: .5s;
@@ -84,8 +88,8 @@ a.header-button > .material-icons-outlined{
 .search_box .user-box input:valid + label {
     top: -100px;
     left: 0;
-    color: #8f7cec;
-    font-size: 12px;
+    color: var(--background-red-caesersoft);
+    font-size: 16px;
 }
 
 .btn-neon{
@@ -101,9 +105,9 @@ a.header-button > .material-icons-outlined{
     left: 0;
 }
 .btn-neon:hover{
-    background: #a945c7;
-    box-shadow: 0 0 10px #a945c7,
-        0 0 40px #a945c7;
+    background: var(--background-red-caesersoft);
+    box-shadow: 0 0 10px var(--background-red-caesersoft),
+        0 0 40px var(--background-red-caesersoft);
         transition-delay: 1s;
 }
 
@@ -116,7 +120,7 @@ a.header-button > .material-icons-outlined{
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent,#a945c7);
+    background: linear-gradient(90deg, transparent,var(--background-red-caesersoft));
 }
 .btn-neon:hover #span1{
     left: 100%;
@@ -127,7 +131,7 @@ a.header-button > .material-icons-outlined{
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent,#a945c7);
+    background: linear-gradient(270deg, transparent,var(--background-red-caesersoft));
 }
 .btn-neon:hover #span3{
     right: 100%;
@@ -139,7 +143,7 @@ a.header-button > .material-icons-outlined{
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent,#a945c7);
+    background: linear-gradient(180deg, transparent,var(--background-red-caesersoft));
 }
 .btn-neon:hover #span2{
     top: 100%;
@@ -151,7 +155,7 @@ a.header-button > .material-icons-outlined{
     bottom: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent,#a945c7);
+    background: linear-gradient(90deg, transparent,#var(--background-red-caesersoft));
 }
 .btn-neon:hover #span4{
     bottom: 100%;
@@ -160,3 +164,43 @@ a.header-button > .material-icons-outlined{
 }
 
 
+
+/* Extra Small <= 567px */
+@media screen and (max-width:567px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 2fr 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+    }   
+
+.header {
+    display: grid;
+    height: 300px;
+    max-width: 560px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.header-left{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 180px;
+}
+.header-left img{
+    width:200px;
+}
+.header-right{
+    display: grid;
+    margin: 10px;
+}
+.header-button{
+    text-align: center;
+}
+
+.search_box{
+    position: relative;
+    top: 300px;
+}

@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+
+}
+:root{
+    --box-shadow: 0 5px 7px rgba(0,0,0, 0.1);
+    --box-shadow-buton: 0 2px 5px rgba(0,0,0, 0.1);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #333;
+    /*background-image: url(media/Logo/abc_company.png);*/
+    background-size: cover;
+}
+.container-form{
+    display: flex;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    height: 500px;
+    width: 900px;
+    transition: all 1s ease;
+}
+
+.login-box{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #c7eef3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.login-box-chield{
+    width: 100%;
+    padding: 0 30px;
+}
+.login-box-chield h2{
+    font-size: 2.5rem;
+    color: #333;
+}
+.login-box-chield p{
+    margin: 15px 0;
+    color: #555;
+}
+.login-box-chield input{
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #9191bd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #9191bd;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.login-box-chield input:hover {
+    background-color: #9191bd;
+    border: none;
+    color: #fff;
+    box-shadow: var(--box-shadow-buton);
+}
+
+/*----------Right ----------*/
+.form-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.form-information-chield{
+    padding: 0 30px;
+}
+.form-information-chield h2{
+    color: #333;
+    font-size: 2rem;
+}
+.form-information-chield p{
+    color: #555;
+}
+
+.form{
+    margin: 30px 0 0 0;
+}
+.form label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow-buton);
+}
+.form label input{
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+}
+.form label i{
+    color:#a7a7a7;
+}
+.form input[type="submit"]{
+    background-color: #9191bd;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: var(--box-shadow-buton);
+}
+.form input[type="submit"]:hover{
+    background-color: #a7a7a7;
+}
+
+.bx{
+    font-size: 30px;
+    transform: translateX(-5px);
+    cursor: pointer;
+}
+.hide{
+    position: absolute;
+    transform: translateY(-300%);
+}
+/*----------RESPONSIVE FORM ----------*/
+@media screen and (max-width:750px){ 
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:580px){ 
+    html{
+        font-size: 10px;
+    }
+    .container-form{
+        height: auto;
+        flex-direction: column;
+    }
+    .login-box{
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px 20px 0 0;
+    }
+    .form-information{
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+    }
+}
