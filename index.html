@@ -8,66 +8,86 @@
       rel="stylesheet">
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/base/style_index.css">
-    
     <title>Gestion de Taller</title>
 </head>
 <body>
-    <div class="container-form search hide">
-        <div class="login-box">
-            <div class="login-box-chield">
-                <h2>Bienvenido</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vitae iste tenetur? Accusantium fugit vero repudiandae adipisci ex harum voluptatem! Porro molestias ea aliquam debitis repudiandae et iste pariatur laborum!</p>
-                <input type="button" value="Iniciar Sesión" id="sign-in">
+    <!---------- HEADER ---------->
+    <header>
+        <nav>
+            <div class="logo">CaeserSoft</div>
+            <input type="checkbox" name="" id="click">
+            <label for="click" class="menu-btn-nav">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="">Iniciar Sesión</a></li>
+                <li><a href="" class="active">Buscar Orden</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!---------- END HEADER ---------->
+    <!---------- CONTAINER ---------->
+    <main>
+        <div class="container-form search hide">
+            <div class="login-box">
+                <div class="login-box-chield">
+                    <h2>Bienvenido</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vitae iste tenetur? Accusantium fugit vero repudiandae adipisci ex harum voluptatem! Porro molestias ea aliquam debitis repudiandae et iste pariatur laborum!</p>
+                    <input type="button" value="Iniciar Sesión" id="sign-in">
+                </div>
+            </div>
+            <div class="form-information">
+                <div class="form-information-chield">
+                    <h2>Buscar Orden de trabajo</h2>
+                    <p>Para Saber el estado de su equipo por favor llene los datos</p>
+                    <form action="" class="form">
+                        <label>
+                            <i class="material-icons-outlined">badge</i>
+                            <input type="text" name="" required="required" placeholder="Documento del Titular">
+                        </label>
+                        
+                        <label for="">
+                            <i class="material-icons-outlined">article</i>
+                            <input type="text" name="" id="" placeholder="Numero de Orden de Trabajo">
+                        </label>
+                        <input type="submit" value="Buscar Orden">
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="form-information">
-            <div class="form-information-chield">
-                <h2>Buscar Orden de trabajo</h2>
-                <p>Para Saber el estado de su equipo por favor llene los datos</p>
-                <form action="" class="form">
-                    <label>
-                        <i class="material-icons-outlined">badge</i>
-                        <input type="text" name="" required="required" placeholder="Documento del Titular">
-                    </label>
-                    
-                    <label for="">
-                        <i class="material-icons-outlined">article</i>
-                        <input type="text" name="" id="" placeholder="Numero de Orden de Trabajo">
-                    </label>
-                    <input type="submit" value="Buscar Orden">
-                </form>
+    
+        <div class="container-form login">
+            <div class="login-box">
+                <div class="login-box-chield">
+                    <h2>¡Bienvenido Nuevamente!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vitae iste tenetur? Accusantium fugit vero repudiandae adipisci ex harum voluptatem! Porro molestias ea aliquam debitis repudiandae et iste pariatur laborum!</p>
+                    <input type="button" value="Buscar Orden" id="search">
+                </div>
+            </div>
+            <div class="form-information">
+                <div class="form-information-chield">
+                    <h2>Iniciar Sesión</h2>
+                    <p>Nos espera un arduo día de trabajo</p>
+                    <form action="" class="form">
+                        <label>
+                            <i class="material-icons-outlined">account_box</i>
+                            <input type="text" name="" required="required" placeholder="Usuario">
+                        </label>
+                        <label>
+                            <i class="material-icons-outlined">password</i>
+                            <input type="password" name="" id="pass" placeholder="Contraseña">
+                            <i class="material-icons-outlined bx">visibility</i>
+                        </label>
+                        <input type="submit" value="Iniciar Sesión">
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="container-form login">
-        <div class="login-box">
-            <div class="login-box-chield">
-                <h2>¡Bienvenido Nuevamente!</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vitae iste tenetur? Accusantium fugit vero repudiandae adipisci ex harum voluptatem! Porro molestias ea aliquam debitis repudiandae et iste pariatur laborum!</p>
-                <input type="button" value="Buscar Orden" id="search">
-            </div>
-        </div>
-        <div class="form-information">
-            <div class="form-information-chield">
-                <h2>Iniciar Sesión</h2>
-                <p>Nos espera un arduo día de trabajo</p>
-                <form action="" class="form">
-                    <label>
-                        <i class="material-icons-outlined">account_box</i>
-                        <input type="text" name="" required="required" placeholder="Usuario">
-                    </label>
-                    <label>
-                        <i class="material-icons-outlined">password</i>
-                        <input type="password" name="" id="pass" placeholder="Contraseña">
-                        <i class="material-icons-outlined bx">visibility</i>
-                    </label>
-                    <input type="submit" value="Iniciar Sesión">
-                </form>
-            </div>
-        </div>
-    </div>
+    
+    </main>
+        <!---------- END CONTAINER ---------->
     <!--Custon JS-->
     <script src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/7744c89df5.js" crossorigin="anonymous"></script>
 </body>
 </html>

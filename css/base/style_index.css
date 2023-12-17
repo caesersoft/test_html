@@ -3,28 +3,92 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat',sans-serif;
-
 }
 :root{
     --box-shadow: 0 5px 7px rgba(0,0,0, 0.1);
     --box-shadow-buton: 0 2px 5px rgba(0,0,0, 0.1);
+    --background-gray: #868484;    
+    --background-buton:#9191bd;
+    --background-nav: #1f6293;
 }
 body{
+    
+    /*background: #333;
+    /*background-image: url(media/Logo/abc_company.png);*/
+    /*background-size: cover;*/
+}
+/*----------Bar Menu ----------*/
+header{
+     width: 100vw;
+     height: 20%;
+}
+main{
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: #333;
-    /*background-image: url(media/Logo/abc_company.png);*/
-    background-size: cover;
 }
+nav{
+    display: flex;
+    height: 76px;
+    width: 100%;
+    background: var(--background-buton);    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+}
+nav .menu-btn-nav i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.active{
+    background: #fff;
+    color: #111;
+}
+nav ul li a:hover{
+    background: #fff;
+    color: #111;
+}
+
+/*----------container----------*/
 .container-form{
     display: flex;
     border-radius: 20px;
-    box-shadow: var(--box-shadow);
     height: 500px;
     width: 900px;
     transition: all 1s ease;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .login-box{
@@ -32,9 +96,10 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: #c7eef3;
+    background-color: var(--background-buton);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0, .75);
 }
 .login-box-chield{
     width: 100%;
@@ -51,15 +116,15 @@ body{
 .login-box-chield input{
     background-color: transparent;
     outline: none;
-    border: solid 2px #9191bd;
+    border: solid 2px var(--background-gray);
     border-radius: 20px;
     padding: 10px 20px;
-    color: #9191bd;
+    color: #fff;
     cursor: pointer;
     transition: background-color .3s ease;
 }
 .login-box-chield input:hover {
-    background-color: #9191bd;
+    background-color: var(--background-gray);
     border: none;
     color: #fff;
     box-shadow: var(--box-shadow-buton);
@@ -75,6 +140,7 @@ body{
     background-color: #f8f8f8;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0, .75);
 }
 .form-information-chield{
     padding: 0 30px;
@@ -135,14 +201,75 @@ body{
     transform: translateY(-300%);
 }
 /*----------RESPONSIVE FORM ----------*/
+
+
+@media screen and (max-width:1000px){
+    nav{
+        height: 60px;
+        padding: 0 40px 0 50px;
+    }
+    .container-form{
+        height: auto;
+        width: 90%;
+    }
+    .login-box{
+        padding: 20px;
+        width: 50%;
+    }
+}
 @media screen and (max-width:750px){ 
     html{
         font-size: 12px;
+    }
+    nav .menu-btn-nav i{
+        display: block;
+    }
+    #click:checked ~ .menu-btn-nav i::before{
+        content: '\f00d';
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.03s ease;
+        z-index: 9;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li a{
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+        margin-left: 0;
+    }
+    nav ul li a .active,
+    nav ul li a:hover{
+        background: none;
+        color: cyan;
+    }
+    .active{
+        background: none;
+        color: cyan
     }
 }
 @media screen and (max-width:580px){ 
     html{
         font-size: 10px;
+        min-width: 400px;
     }
     .container-form{
         height: auto;
@@ -157,5 +284,10 @@ body{
         width: 100%;
         padding: 20px;
         border-radius: 0 0 20px 20px;
+    }
+}
+@media screen and (max-width:400px){ 
+    header{
+        min-width: 400px;
     }
 }
