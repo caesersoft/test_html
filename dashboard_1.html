@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style_base.css">
+    <title>Dashboard_1</title>
+</head>
+<body>
+    <div class="sidebar ">
+        <div class="logo-details">
+            <img src="media/Logo/company.png" alt="CaeserSoft e.i.r.l" width="40px">
+            <span class="logo-name">CaeserSoft</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class="material-icons-outlined">grid_view</i>
+                    <span class="link-name">Escritorio</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="" class="link-mname">Escritorio</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="material-icons-outlined">toc</i>
+                        <span class="link-name">Ordenes</span>
+                    </a>
+                        <i class="material-icons-outlined arrow">expand_more</i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name">Ordenes</a></li>
+                    <li><a href="">Todas las órdenes</a></li>
+                    <li><a href="">Ingresos nuevos</a></li>
+                    <li><a href="">Pendientes a reparar</a></li>
+                    <li><a href="">Esperando aprobación</a></li>
+                    <li><a href="">Para baja</a></li>
+                    <li><a href="">Crear nueva</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons-outlined">inventory</i>
+                    <span class="link-name">Inventario</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="" class="link-mname">Inventario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons-outlined">people_alt</i>
+                    <span class="link-name">Clientes</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="" class="link-mname">Clientes</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons-outlined">local_shipping</i>
+                    <span class="link-name">Proveedores</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="" class="link-mname">Proveedores</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons-outlined">electrical_services</i>
+                    <span class="link-name">Servicios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="" class="link-mname">Servicios</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class="material-icons-outlined">local_convenience_store</i>
+                        <span class="link-name">Taller</span>
+                    </a>
+                        <i class="material-icons-outlined arrow">expand_more</i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name">Configurar Taller</a></li>
+                    <li><a href="">Recursos</a></li>
+                    <li><a href="">Conf. datos públicos</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="media/Default/default-user.png" alt="avatar">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile-name">Cesar Arismendiz</div>
+                        <div class="job">Web Desginer</div>
+                    </div>
+                    <i class="material-icons-outlined">logout</i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="material-icons-outlined bx-menu">menu</i>
+            <span class="text">Drop Down Sidebar</span>
+        </div>
+    </section>
+<script>
+    let arrow = document.querySelectorAll(".arrow");
+    for(var i=0; i<arrow.length; i++){
+        arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu");
+        });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    sidebarBtn.addEventListener("click",()=>{
+        sidebar.classList.toggle("close");
+    })
+    console.log(sidebarBtn);
+
+</script>
+</body>
+</html>
